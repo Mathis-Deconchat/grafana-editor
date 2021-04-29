@@ -1,0 +1,19 @@
+<mat-card id={{title}}>
+    <mat-card-title>
+        <h4>{{title}}</h4>
+    </mat-card-title>
+
+
+    <div fxLayout="row" fxFlexFill>
+        <ngx-monaco-editor [options]="editorOptions" [(ngModel)]="code" (onInit)="onInit($event)" height='200'>
+        </ngx-monaco-editor>
+        <button (click)=savePanel() mat-raised-button color="accent">Save</button>
+        <button (click)=resetPanel() mat-raised-button color="warn">Reset</button>
+    </div>
+
+
+
+    <mat-card-footer>
+        <p>Panel index : {{panelIndex}} || target index : {{targetIndex}}</p>
+    </mat-card-footer>
+</mat-card>

@@ -1,0 +1,38 @@
+@import '@angular/material/prebuilt-themes/deeppurple-amber.css';
+
+html,
+body {
+  height: 100%;
+}
+
+ngx-monaco-editor {
+  width: 50%;
+}
+
+
+mat-drawer-container {
+  width: 100%;
+  height: 100%;
+}
+
+#sidenav {
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  top: 20%;
+  overflow: hidden;
+}
+
+#content {
+  min-height: 100vh;
+  margin: 20px;
+
+}
+
+
+mat-drawer {
+  height: 100%;
+  width: 100%
+}

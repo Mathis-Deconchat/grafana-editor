@@ -1,0 +1,23 @@
+@import '@angular/material/prebuilt-themes/deeppurple-amber.css';
+
+ngx-monaco-editor {
+  width: 90%;
+  height: 500px !important;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+mat-card {
+  margin: 10px;
+  margin-bottom: 30px;
+}
+
+mat-card-footer {
+  padding: 10px;
+}
+
+button {
+  height: 10%;
+  margin-left: 10px;
+}

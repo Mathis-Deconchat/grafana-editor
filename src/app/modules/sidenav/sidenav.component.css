@@ -1,0 +1,56 @@
+ul {
+  text-decoration: none;
+  list-style: none;
+  text-align: center;
+}
+
+li {
+  text-decoration: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+#container {
+  display: flex;
+  text-align: center;
+}
+
+h1 {
+  align-self: center;
+  justify-self: center;
+}
+
+
+a {
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+}
+
+.link {
+  position: relative;
+  transition: clip-path 275ms ease;
+}
+
+.link:hover span::before,
+.link:focus span::before {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.link span {
+  position: relative;
+  display: inline-block;
+  color: #2c2fe8;
+}
+
+.link span::before {
+  position: absolute;
+  content: attr(data-content);
+  color: #1619cb;
+  text-decoration: underline;
+  text-decoration-color: #1619cb;
+  clip-path: polygon(0 0, 0 0, 0% 100%, 0 100%);
+  transition: clip-path 275ms ease;
+}
