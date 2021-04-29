@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { DashboardFetcherService } from './dashboard-fetcher.service'
+import { DashboardFetcherService } from './services/dashboard-fetcher.service'
 import { Dashboard } from './dashboard'
 import { Panels } from './panels';
 import { DashboardSearch } from './dashboard-search';

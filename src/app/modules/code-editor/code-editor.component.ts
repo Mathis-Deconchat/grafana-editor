@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Dashboard, Dashboard1 } from '../../dashboard';
-import { DashboardFetcherService } from '../../dashboard-fetcher.service';
+import { DashboardFetcherService } from '../../services/dashboard-fetcher.service';
 import { format } from 'sql-formatter';
 
 import {
@@ -20,7 +20,6 @@ export class CodeEditorComponent implements OnInit {
 
 
   ngOnInit(): void {
-
     this.DashboardFetcherService.getDashboard(this.uid)
       .subscribe(response => {
         console.log(response)

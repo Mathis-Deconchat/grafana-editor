@@ -13,7 +13,8 @@ import { MatCardModule } from '@angular/material/card';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { SidenavComponent } from './modules/sidenav/sidenav.component';
 import { DemoMaterialModule } from './material-module';
-
+import { TestComponentComponent } from './modules/test-component/test-component.component';
+import { AppRoutingModule } from './app-routing.module';
 
 
 
@@ -21,7 +22,8 @@ import { DemoMaterialModule } from './material-module';
   declarations: [
     AppComponent,
     CodeEditorComponent,
-    SidenavComponent
+    SidenavComponent,
+    TestComponentComponent
   ],
   imports: [
     BrowserModule,
@@ -33,7 +35,8 @@ import { DemoMaterialModule } from './material-module';
     MatSelectModule,
     FlexLayoutModule,
     MatCardModule,
-    DemoMaterialModule
+    DemoMaterialModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

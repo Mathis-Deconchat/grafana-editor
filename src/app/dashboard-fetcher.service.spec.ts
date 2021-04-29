@@ -1,6 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 
-import { DashboardFetcherService } from './dashboard-fetcher.service';
+import { DashboardFetcherService } from './services/dashboard-fetcher.service';
 
 describe('DashboardFetcherService', () => {
   let service: DashboardFetcherService;
