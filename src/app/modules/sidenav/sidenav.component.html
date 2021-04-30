@@ -1,11 +1,10 @@
 <div class="container">
-
+    <h3>Liste de panels</h3>
     <ul>
-        <h3>Liste de panels</h3>
+
         <li *ngFor="let t of title">
             <a *ngIf="t.length > 30; else sizeOk" class="link" href="#{{t}}"><span attr.data-content="{{t |
-                slice:0:30}}">{{t |
-                    slice:0:30}}..</span></a>
+                slice:0:30}}">{{t | slice:0:30}}..</span></a>
             <ng-template #sizeOk>
                 <a class='link' href="#{{t}}"><span attr.data-content="{{t}}">{{t}}</span></a>
             </ng-template>

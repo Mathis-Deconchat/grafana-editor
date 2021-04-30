@@ -1,52 +1,27 @@
-<router-outlet></router-outlet>
 <div class="bounds">
 
+      <div class="content" fxLayout="row" fxLayout.xs="column" fxFlexFill>
 
+            <div fxFlex="20" class="sec1" fxFlex.xs="55">
+                  <div class='fixed'>
+                        <app-sidenav></app-sidenav>
+                  </div>
 
-  <div class="content" fxLayout="row" fxLayout.xs="column" fxFlexFill>
-    <mat-drawer-container>
-
-      <mat-drawer fixedInViewport="true" mode='side' opened fxFlex="15" class="sec1" fxFlex.xs="55" fxLayout='center'>
-        <div id='sidenav'>
-          <app-sidenav [title]="arrayOfTitles"></app-sidenav>
-        </div>
-
-      </mat-drawer>
-
-      <mat-drawer-content fxFlex="70" class="sec2">
-        <div id='content'>
-
-          <h1>Editor</h1>
-          <h4>Sélectionner le Dashboard</h4>
-          <mat-form-field appearance="fill">
-            <mat-label>Nom du Dashboard</mat-label>
-            <mat-select [(value)]="selectedDashboard" (selectionChange)="changeSelect($event)">
-              <mat-option></mat-option>
-              <mat-option [value]="dashboard.uid" *ngFor="let dashboard of arrayOfDashboard">{{ dashboard.title }}
-              </mat-option>
-            </mat-select>
-          </mat-form-field>
-          <p>You selected: {{selectedDashboard}}</p>
-          <div *ngIf='selectedDashboard.length > 0'>
-            <div *ngFor="let panel of arrayOfPanels; let i = index">
-
-              <div *ngFor='let targetsSql of panel.sql; let f = index'>
-
-                <app-code-editor *ngIf="i !== null && f !== null" [targetIndex]="f" [panelIndex]="i"
-                  [uid]="selectedDashboard">
-                </app-code-editor>
-              </div>
             </div>
-          </div>
-        </div>
-      </mat-drawer-content> <!-- Fin section 2-->
-    </mat-drawer-container>
+            <div fxFlex="75" class="sec2">
+                  <router-outlet></router-outlet>
+            </div>
 
 
-  </div>
-
+      </div>
 
 </div>
+
+<div class="container">
+
+</div>
+
+
 
 
 

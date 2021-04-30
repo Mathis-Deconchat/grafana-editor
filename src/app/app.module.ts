@@ -15,6 +15,7 @@ import { SidenavComponent } from './modules/sidenav/sidenav.component';
 import { DemoMaterialModule } from './material-module';
 import { TestComponentComponent } from './modules/test-component/test-component.component';
 import { AppRoutingModule } from './app-routing.module';
+import { EditorsComponent } from './modules/editors/editors.component';
 
 
 
@@ -23,7 +24,8 @@ import { AppRoutingModule } from './app-routing.module';
     AppComponent,
     CodeEditorComponent,
     SidenavComponent,
-    TestComponentComponent
+    TestComponentComponent,
+    EditorsComponent
   ],
   imports: [
     BrowserModule,

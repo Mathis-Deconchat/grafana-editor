@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { CentralService } from '../../services/central.service'
+import { DashboardTitles } from '../../panels'
 
 @Component({
   selector: 'app-test-component',
@@ -7,9 +9,28 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TestComponentComponent implements OnInit {
 
-  constructor() { }
+
+  constructor(private _centralService: CentralService) { }
+
 
   ngOnInit(): void {
   }
+
+  loadDashboard() {
+    console.log('l')
+    this._centralService.loadDashboard('jY7U3suMk')
+
+
+  }
+
+  displayList() {
+    this._centralService.displayDashboard()
+  }
+
+
+
+
+
+
 
 }

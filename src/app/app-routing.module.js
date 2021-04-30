@@ -10,10 +10,10 @@ exports.AppRoutingModule = void 0;
 var core_1 = require("@angular/core");
 var router_1 = require("@angular/router");
 var test_component_component_1 = require("./modules/test-component/test-component.component");
-var app_component_1 = require("./app.component");
+var editors_component_1 = require("./modules/editors/editors.component");
 var routes = [
     { path: 'test', component: test_component_component_1.TestComponentComponent },
-    { path: '', component: app_component_1.AppComponent },
+    { path: '', component: editors_component_1.EditorsComponent },
 ];
 var AppRoutingModule = /** @class */ (function () {
     function AppRoutingModule() {

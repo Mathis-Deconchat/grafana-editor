@@ -9,51 +9,8 @@ exports.__esModule = true;
 exports.AppComponent = void 0;
 var core_1 = require("@angular/core");
 var AppComponent = /** @class */ (function () {
-    function AppComponent(DashboardFetcherService) {
-        this.DashboardFetcherService = DashboardFetcherService;
-        this.arrayOfDashboard = [];
-        this.selectedDashboard = '';
-        this.arrayOfPanels = [];
-        this.arrayOfTitles = [];
+    function AppComponent() {
     }
-    AppComponent.prototype.ngOnInit = function () {
-        var _this = this;
-        this.DashboardFetcherService.getAllDashboard()
-            .subscribe(function (response) {
-            var filteredResponse = response.filter(function (response) {
-                return response.type = 'dash-db';
-            });
-            _this.arrayOfDashboard = filteredResponse;
-        });
-    };
-    AppComponent.prototype.changeSelect = function (event) {
-        this.loadJson(event.value);
-    };
-    AppComponent.prototype.loadJson = function (uid) {
-        var _this = this;
-        this.arrayOfPanels = [];
-        this.DashboardFetcherService.getDashboard(uid)
-            .subscribe(function (response) {
-            _this.dashboard = response;
-            localStorage.clear();
-            localStorage.setItem('currentDashBoard', JSON.stringify(_this.dashboard));
-            response === null || response === void 0 ? void 0 : response.dashboard.panels.map(function (e, i) {
-                var _a;
-                var arrayOfSql = [];
-                var title = e.title;
-                (_a = e.targets) === null || _a === void 0 ? void 0 : _a.map(function (v) {
-                    arrayOfSql.push(v.rawSql);
-                });
-                _this.arrayOfTitles.push(title);
-                var panelObject = {
-                    'id': i,
-                    'title': title,
-                    'sql': arrayOfSql
-                };
-                _this.arrayOfPanels.push(panelObject);
-            });
-        });
-    };
     AppComponent = __decorate([
         core_1.Component({
             selector: 'app-root',

@@ -3,3 +3,8 @@ export interface Panels {
     title: string,
     sql: (string)[]
 }
+
+export interface DashboardTitles {
+    title: string,
+    uid: string
+}

@@ -1,0 +1,21 @@
+@import '@angular/material/prebuilt-themes/deeppurple-amber.css';
+
+.title:after {
+  content: '';
+  height: 5px;
+  width: 50%;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  margin-top: 5px;
+  display: block;
+  background: #FFA804;
+}
+
+#content {
+  min-height: 100vh;
+  margin: 20px;
+}
+
+mat-form-field {
+  width: 40%;
+}
