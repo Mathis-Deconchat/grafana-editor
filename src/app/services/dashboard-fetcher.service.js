@@ -11,7 +11,7 @@ var core_1 = require("@angular/core");
 var DashboardFetcherService = /** @class */ (function () {
     function DashboardFetcherService(http) {
         this.http = http;
-        this.url = "http://192.168.99.61/grafana/api/";
+        this.url = "http://192.168.99.61/grafana/ang/api/";
     }
     DashboardFetcherService.prototype.getDashboard = function (uid) {
         return this.http.get(this.url + ("dashboards/uid/" + uid));

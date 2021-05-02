@@ -12,7 +12,7 @@ import { DashboardSearch } from '../dashboard-search'
 export class DashboardFetcherService {
 
   constructor(private http: HttpClient) { }
-  private url = "http://192.168.99.61/grafana/api/"
+  private url = "http://192.168.99.61/grafana/ang/api/"
 
   getDashboard(uid?: string): Observable<Dashboard> {
     return this.http.get<Dashboard>(this.url + `dashboards/uid/${uid}`)

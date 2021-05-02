@@ -10,26 +10,21 @@ exports.CentralService = void 0;
 var core_1 = require("@angular/core");
 var rxjs_1 = require("rxjs");
 var CentralService = /** @class */ (function () {
-    function CentralService(_dashboardFectherService) {
-        this._dashboardFectherService = _dashboardFectherService;
+    function CentralService(_dashboardFetcherService) {
+        this._dashboardFetcherService = _dashboardFetcherService;
         this._arrayOfTitlesSource = new rxjs_1.BehaviorSubject([{ 'title': '', 'uid': '' }, { 'title': '', 'uid': '' }]);
         this.arrayOfTitles = this._arrayOfTitlesSource.asObservable();
     }
-    CentralService.prototype.getList = function (dashboardTitles) {
-        this._arrayOfTitlesSource.next(dashboardTitles);
-    };
-    CentralService.prototype.loadDashboard = function (uid) {
-        var _this = this;
-        this._dashboardFectherService.getDashboard(uid)
+    CentralService.prototype.loadInitialList = function () {
+        this._dashboardFetcherService.getAllDashboard()
             .subscribe(function (res) {
-            _this._dashboard = res;
-            console.log('Loaded');
+            var filteredResponse = res.filter(function (res) {
+                return res.type = 'dash-db';
+            });
+            return filteredResponse;
         }, function (err) {
             console.log(err);
         });
-    };
-    CentralService.prototype.displayDashboard = function () {
-        console.log(this._dashboard);
     };
     CentralService = __decorate([
         core_1.Injectable({

@@ -13,13 +13,7 @@ var TestComponentComponent = /** @class */ (function () {
         this._centralService = _centralService;
     }
     TestComponentComponent.prototype.ngOnInit = function () {
-    };
-    TestComponentComponent.prototype.loadDashboard = function () {
-        console.log('l');
-        this._centralService.loadDashboard('jY7U3suMk');
-    };
-    TestComponentComponent.prototype.displayList = function () {
-        this._centralService.displayDashboard();
+        this._centralService.loadInitialList();
     };
     TestComponentComponent = __decorate([
         core_1.Component({

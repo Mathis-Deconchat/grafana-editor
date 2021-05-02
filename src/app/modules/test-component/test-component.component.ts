@@ -14,18 +14,19 @@ export class TestComponentComponent implements OnInit {
 
 
   ngOnInit(): void {
+    this._centralService.loadInitialList()
   }
 
-  loadDashboard() {
-    console.log('l')
-    this._centralService.loadDashboard('jY7U3suMk')
+  // loadDashboard() {
+  //   console.log('l')
+  //   this._centralService.loadDashboard('jY7U3suMk')
 
 
-  }
+  // }
 
-  displayList() {
-    this._centralService.displayDashboard()
-  }
+  // displayList() {
+  //   this._centralService.displayDashboard()
+  // }
 
 
 
